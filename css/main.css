@@ -730,3 +730,33 @@ input[type=submit]:hover {
 }
 
   }
+  
+  @media screen and (max-width:985px){
+    .footer-section iframe{
+      width:700px;
+    }
+  }
+
+  @media screen and (max-width:726px){
+    .footer-section iframe{
+      width:500px;
+    }
+  }
+
+  @media screen and (max-width:526px){
+    .footer-section iframe{
+      width:450px;
+    }
+  }
+
+  @media screen and (max-width:473px){
+    .footer-section iframe{
+      width:400px;
+    }
+  }
+
+  @media screen and (max-width:400px){
+    .footer-section iframe{
+      width:300px;
+    }
+  }
