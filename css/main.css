@@ -648,6 +648,37 @@ input[type=submit]:hover {
 .our_team .team_member .member_img:hover .social_media{
   transform: scale(1);
 }
+/*===============================blog slider==================================*/
+.blog-warp{
+  padding:50px 0px;
+  text-align:center;
+  max-height:9000px;
+}
+.blog-warp ul li{
+  flex:1 1 250px !important;
+  
+  
+}
+
+.blog-warp span{
+  color:#00adef;
+}
+.each-blog{
+  border:1px solid black;
+  overflow:hidden;
+  width:100%;
+  box-sizing: border-box;
+}
+.each-blog img{
+  width:100%;
+}
+.each-blog p{
+  padding:20px;
+  text-align:justify;
+  box-sizing: border-box;
+}
+
+
 /*==========================footer=============================================================*/  
 #footer{
         
