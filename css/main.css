@@ -491,71 +491,53 @@ input[type=submit]:hover {
 
   }
   /*===============================================================*/
-  .services-div{
-    text-align: center;
-    padding:20px 0;
-  }
-  .services-wrapper{
-    width:80%;
-    
-    margin:auto;
-    display:flex;
-    padding:5px;
-    box-sizing:border-box;
-    flex-wrap:wrap;
-  }
-  
-  .services-wrapper .service-wrap{
-    flex:1 0 30%;
-    border:1px solid black;
-    margin-right:20px;
-    
-    
-  }
-  .service1{
-    flex:1 0 30%;
-  }
-  .service2{
-    flex:1 0 30%;
-    
-  }
-  .service3{
-    flex:1 0 30%;
-  }
-
-   
-  .services-wrapper .service-wrap h2{
-  color:black;
-  }
-  
-  .services-wrapper .service-wrap span{
-    color:#00adef;
-  }
+  .s-wrapper{
  
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+  }
+  .s-container{
+   
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .each-service{
+    max-height:750px;
+    width:32%;
+    border:1px solid black;
+    overflow: hidden;
   
-  .services-wrapper .service-wrap h3{
-    padding:10px;
   }
-  .services-wrapper .service-wrap p{
-    padding:10px;
-  }
-  .services-wrapper .service-wrap img{
+  .each-service img {
     width:100%;
+    height:50%;
   }
-
-  @media screen and (max-width:1216px){
-    .service3{
-      margin-top:20px;
-      flex:1 0 30%;
-      flex-flow:column;
-    }
-    .services-wrapper{
-      width:90%;
-      margin: auto;
-    }
+  .each-service h3 {
+    justify-content: left;
+    background:linear-gradient(#00adef,#00adef) bottom no-repeat;
    
-
-   
+    
+  }
+  .each-service p{
+    height:100%;
+  }
+  @media screen and (max-width:1000px){
+    .each-service{
+      width:49%;
+      margin-top:10px;
+    }
+  }
+  
+  @media screen and (max-width:600px){
+    .each-service{
+      width:100%;
+    }
+    .s-container{
+      width:95%;
+    }
   }
   /*====================================================================================*/
   @import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
