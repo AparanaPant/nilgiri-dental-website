@@ -12,7 +12,7 @@
     <!-------------------  This stylesheet provides the link to social media and contact icons in the header  ------------------------->
     <script src="https://kit.fontawesome.com/4e40b5e662.js" crossorigin="anonymous"></script>
     <!--------------------------------for nav hamburger menu---------------------------------------------------------------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
      <!------------for blog slider------------------------------>
      <link rel="stylesheet" type="text/css" media="screen" href="css/lightslider.css"/>
       <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
@@ -44,31 +44,50 @@
 <!--=============================================================================================================================-->
 
 <!--------------------------------------------------------------------navvvv------------------------------------------------------->
-<div id="nav-header">
-    <div class="logo">
-      <img src="images/logo.png">
-      <h2 class="logo-text"><span>Hello<br> Dental Hospital</span></h2>
-    </div>
-    <i class="fas fa-bars menu-toggle"></i>
-    <ul class="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li>
-        <a href="#services">
-          <i class="fa fa-chevron-down"></i>
-          Services</a>
-        <ul>
-            <li><a href="#">TOOTH EXTRACTION</a></li>
-            <li><a href="#">ORTHODONTICS</a></li>
-            <li><a href="#">DENTAL FILLINGS</a></li>
-        </ul>
-      </li>
-      <li><a href="#team">Doctor</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#contact">Contact Us</a></li>
 
-    </ul>
-</div>
+<section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#"><img src="images/logo.png"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">Home</a>
+        </li>
+       
+        <li>
+          <a href="#services">Services</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#">Orthodontist</a>
+            </li>
+            <li>
+              <a href="#">Tooth extraction</a>
+            </li>
+            <li>
+              <a href="#">Dental fillingst</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#team">Doctor</a>
+        </li>
+
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        <li>
+          <a href="#about">About us</a>
+        </li>
+        <li>
+          <a href="#contact">Contact us</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
 
 <!--.................................................................................................................................-->
 <div class="slideshow-container">
@@ -160,7 +179,7 @@
     </div>
 <!--==============================================================================================-->
   
-<div class="s-wrapper">
+<div class="s-wrapper" id="services">
   <h2><span style="color: #00adef;">OUR</span> SERVICES</h2>
   <p> We provide the best services all over Nepal</p>
         <div class= "s-container">

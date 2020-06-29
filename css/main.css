@@ -161,136 +161,184 @@ body{
 
 /*.............................................................nav...............................................................*/
 
-#nav-header{
- background:rgba(0,173,239, 0.6);
-  
-  height:85px;
-  
-   }
-#nav-header * {
-  color:black;
-}
-#nav-header .logo{
-  float:left;
-  
-  height:inherit;
-  margin-left:2em;
-}
-#nav-header .logo img{
-  margin:15px;
-}
-#nav-header .logo h2{
-  margin-bottom:5px;
-  position:absolute;
-
-}
-#nav-header ul{
-  float:right;
-  
-  margin:0px;
-  padding:0px;
-  list-style:none;
+.nav-bar {
+  height: 85px;
+  background: #00adef;
 }
 
-#nav-header ul li{
-  float:left;
-  position:relative;
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 1.4em;
 }
-#nav-header ul li a{
-  display:block;
-  padding:30px;
-  font-size:1.1em;
-  text-decoration:none;
-
+.brand a img {
+  max-height: 70px;
+  margin-top:15px;
 }
-#nav-header ul li a:hover{
-  background:white;
-  transition:1s;
-}
-#nav-header ul li ul{
-  position:absolute;
-  top:82px;
-  left:0px;
-  width:180px;
-  display:none;
-  padding:5px;
-  background: rgba(0,173,239, 0.9);
-  z-index:888888;
-  
-}
-#nav-header ul li ul li:last-child{
-  border-bottom:none;
-}
-#nav-header ul li:hover ul{
-  display:block;
-  transition-delay: 3s;
-}
-#nav-header ul li ul li{
-  width:100%;
-  border-bottom:1px solid black;
-}
-#nav-header ul li ul li a{
-  padding:10px;
-}
-#nav-header ul li ul li a:hover{
-  background-color:white;
-}
-.logo h2{
-  display:inline-block;
-}
-#nav-header .menu-toggle{
-  display:none;
-}
-.show-nav{
-  display:block!important;
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 1130px){
-  #nav-header{
-    position:relative;
-  }
-  #nav-header ul{
-    width:100%;
-    background-color:lightgrey;
-    
-    border:1px solid black;
-    display:none;
-    overflow:hidden;
-    
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
-#nav-header ul li{
-  width:100%;
-  border-bottom: 1px solid black;
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #00adef;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #2ab1ce;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
   
+  height: 70px;
+  width: 70px;
 }
-#nav-header ul li ul{
-  position:static;
-  display:block;
-  width:100%;
-  
-  border:none;
-  background: lightgrey;
-  
-  
-}
-#nav-header ul li ul li{
-  border-bottom: none;
-}
-#nav-header .menu-toggle{
-  display:block;
-  position:absolute;
-  right:50px;
-  top:20px;
-  font-size:2.5em;
-  margin-top:2px;
-}
-}
-@media screen and (max-width:400px){
-  #nav-header .logo{
-    margin-left:0px;
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
   }
 
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+	padding-left: 25%;
+	 
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+	.brand a img {
+		max-height: 60px;
+		margin-top: 5px;
+	}
 }
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 90%;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+@media screen and (max-width:327px){
+
+  #nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 100%;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    
+  }
+}
+
 /*...................................................................................................................................*/
 
 .slideshow-container{
